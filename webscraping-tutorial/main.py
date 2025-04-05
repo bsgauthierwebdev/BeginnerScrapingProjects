@@ -8,7 +8,7 @@ options = Options()
 options.headless = False # Set to True if you want to run the browser without a UI
 
 # Step 2: Specify the path to ChromeDriver using Service
-service = Service(r"C:\Users\Brent\Desktop\Web Projects\PythonProjects\webscraping-tutorial\drivers\chromedriver.exe") 
+service = Service(r"C:\Users\Brent\Desktop\Web Projects\PythonProjects\BeginnerScrapingProjects\webscraping-tutorial\drivers\chromedriver.exe") 
 
 # Step 3: Initialize the WebDriver with the Service object and options
 driver = webdriver.Chrome(service=service, options=options)
