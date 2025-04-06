@@ -35,9 +35,12 @@ def scrape_quotes():
         for quote in quotes:
             text = quote.find_element(By.CLASS_NAME, 'text').text
             author = quote.find_element(By.CLASS_NAME, 'author').text
+            tag_elements = quote.find_elements(By.CLASS_NAME, 'tag')
+            tags = [tag.text for tag in tag_elements]
             print(f'✅ {text}')
             print(f'- {author}')
-            print()
+            print(f'Tags: {", ".join(tags)}')
+            print('-' * 60)
 
     except Exception as e:
         print("⚠️ An error occurred:", e)
